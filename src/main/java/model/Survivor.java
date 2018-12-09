@@ -1,12 +1,13 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Survivor
 {
   private String name;
   private AtomicInteger wounds;
-  private Equipment[] equipments;
+  private Equipment equipment;
   private Action[] actions;
 
   public Survivor(String name)
@@ -14,7 +15,7 @@ public class Survivor
     this.name = name;
     this.wounds = new AtomicInteger();
     this.actions = new Action[3];
-    this.equipments = new Equipment[5];
+    this.equipment = new Equipment();
   }
 
   public String getName()
@@ -32,9 +33,8 @@ public class Survivor
     return actions;
   }
 
-  public Equipment[] getEquipments()
+  public Equipment getEquipment()
   {
-    return equipments;
+    return equipment;
   }
-
 }
