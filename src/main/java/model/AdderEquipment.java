@@ -4,22 +4,21 @@ import java.util.List;
 
 public class AdderEquipment
 {
+  private static final int MAX_WEAPON_IN_HAND = 2;
+  private static final int MAX_WEAPON_IN_RESERVE = 3;
 
-  private static final int MAX_ELEMENT_IN_HAND =2;
-  private static final int MAX_ELEMENT_IN_RESERVE =3;
-
-  public void addInHand(String item, List<String> inHand)
+  public void addInHand(Weapon weapon, List<Weapon> inHand)
   {
-    if(inHand.size()< MAX_ELEMENT_IN_HAND){
-      inHand.add(item);
+    if(inHand.size()< MAX_WEAPON_IN_HAND){
+      inHand.add(weapon);
     }else {
-      throw new AdderEquipmentException("The survivor just have 2 element in hand");
+      throw new AdderEquipmentException("The survivor just have 2 weapons in hand");
     }
   }
 
-  public void addInReserve(String item, List<String> inReserve){
-    if(inReserve.size()< MAX_ELEMENT_IN_RESERVE){
-      inReserve.add(item);
+  public void addInReserve(Weapon weapon, List<Weapon> inReserve){
+    if(inReserve.size()< MAX_WEAPON_IN_RESERVE){
+      inReserve.add(weapon);
     }else {
       throw new AdderEquipmentException("The reserve is full");
     }
@@ -32,5 +31,4 @@ public class AdderEquipment
       super(message);
     }
   }
-
 }

@@ -7,8 +7,8 @@ import java.util.List;
 
 public class Equipment
 {
-  private Collection inHand = new ArrayList<String>();
-  private Collection inReserve = new ArrayList<String>();
+  private Collection inHand = new ArrayList<Weapon>();
+  private Collection inReserve = new ArrayList<Weapon>();
   private AdderEquipment adderEquipment = new AdderEquipment();
   private RemoverEquipment removerEquipment = new RemoverEquipment();
 
@@ -22,21 +22,21 @@ public class Equipment
     return Collections.unmodifiableCollection(inReserve);
   }
 
-  public void addInHand(String item)
+  public void addInHand(Weapon weapon)
   {
-    adderEquipment.addInHand(item, (List) inHand);
+    adderEquipment.addInHand(weapon, (List) inHand);
   }
 
-  public void addInReserve(String item){
-    adderEquipment.addInReserve(item, (List) inReserve);
+  public void addInReserve(Weapon weapon){
+    adderEquipment.addInReserve(weapon, (List) inReserve);
   }
 
-  public void removeInHand(String item){
-    removerEquipment.removeInHand(item, (List) inHand);
+  public void removeInHand(Weapon weapon){
+    removerEquipment.removeInHand(weapon, (List) inHand);
   }
 
-  public void removeInReserve(String item){
-    removerEquipment.removeInReserve(item, (List) inReserve);
+  public void removeInReserve(Weapon weapon){
+    removerEquipment.removeInReserve(weapon, (List) inReserve);
   }
 }
 

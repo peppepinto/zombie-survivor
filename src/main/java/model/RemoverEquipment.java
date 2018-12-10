@@ -4,11 +4,11 @@ import java.util.List;
 
 public class RemoverEquipment
 {
-  public void removeInHand(String item, List inHand){
-    inHand.remove(item);
+  public void removeInHand(Weapon weapon, List inHand){
+    inHand.remove(weapon);
   }
 
-  public void removeInReserve(String item, List inReserve){
-    inReserve.remove(item);
+  public void removeInReserve(Weapon weapon, List inReserve){
+    inReserve.remove(weapon);
   }
 }
