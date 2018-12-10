@@ -33,7 +33,7 @@ public class SurvivorAdderEquipmentTest
   }
 
   @Test
-  public void addInHandElement() throws Exception
+  public void addInHandWeapon() throws Exception
   {
     survivor.getEquipment().addInHand(PISTOL);
     survivor.getEquipment().addInHand(KNIFE);
@@ -41,14 +41,14 @@ public class SurvivorAdderEquipmentTest
   }
 
   @Test
-  public void checkTheAddOfElementInHand() throws Exception
+  public void checkTheAddOfWeaponInHand() throws Exception
   {
     survivor.getEquipment().addInHand(PISTOL);
     assertThat(survivor.getEquipment().getInHand().stream().findFirst().get(), is(PISTOL));
   }
 
   @Test
-  public void addInReserveElement()
+  public void addInReserveWeapon()
   {
     survivor.getEquipment().addInReserve(PISTOL);
     survivor.getEquipment().addInReserve(KNIFE);
@@ -56,14 +56,14 @@ public class SurvivorAdderEquipmentTest
   }
 
   @Test
-  public void checkTheAddOfElementInReserve()
+  public void checkTheAddOfWeaponInReserve()
   {
     survivor.getEquipment().addInReserve(PISTOL);
     assertThat(survivor.getEquipment().getInReserve().stream().findFirst().get(), is(PISTOL));
   }
 
   @Test(expected = RuntimeException.class)
-  public void addThreeElementInHand() throws Exception
+  public void addThreeWeaponInHand() throws Exception
   {
     survivor.getEquipment().addInHand(PISTOL);
     survivor.getEquipment().addInHand(KNIFE);
@@ -71,7 +71,7 @@ public class SurvivorAdderEquipmentTest
   }
 
   @Test(expected = Exception.class)
-  public void addFourElementInReserve()
+  public void addFourWeaponInReserve()
   {
     survivor.getEquipment().addInReserve(PISTOL);
     survivor.getEquipment().addInReserve(KATANA);
