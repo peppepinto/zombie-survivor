@@ -22,7 +22,8 @@ public class Equipment
     return Collections.unmodifiableCollection(inReserve);
   }
 
-  public void addInHand(String item){
+  public void addInHand(String item)
+  {
     adderEquipment.addInHand(item, (List) inHand);
   }
 
