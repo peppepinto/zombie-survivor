@@ -70,7 +70,7 @@ public class SurvivorAdderEquipmentTest
     survivor.getEquipment().addInHand(KATANA);
   }
 
-  @Test(expected = Exception.class)
+  @Test(expected = RuntimeException.class)
   public void addFourWeaponInReserve()
   {
     survivor.getEquipment().addInReserve(PISTOL);
